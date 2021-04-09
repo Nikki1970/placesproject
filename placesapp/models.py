@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.gis.db.models import PointField
+from django.urls import reverse
 # Create your models here.
 
 class Place(models.Model):
@@ -13,3 +14,7 @@ class Place(models.Model):
 
     def __str__(self):
         return self.title
+    
+    def get_absolute_url(self):
+        """Returns the url to access a particular author instance."""
+        return reverse('place-detail', args=[str(self.id)])

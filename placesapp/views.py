@@ -9,3 +9,6 @@ def index(request):
 
 class PlacesListView(generic.ListView):
     model = Place
+
+class PlaceDetailView(generic.DetailView):
+    model = Place
