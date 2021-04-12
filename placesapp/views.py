@@ -12,3 +12,11 @@ class PlacesListView(generic.ListView):
 
 class PlaceDetailView(generic.DetailView):
     model = Place
+
+def all_cities(request):
+    place = Place.objects.distinct('city')
+    return render(request, 'placesapp/all_cities.html', context={"all_places": place})
+
+def city_places(request,inputcity):
+    city = Place.objects.filter(city=inputcity)
+    return render(request,'placesapp/city_places.html',context={"cities":city})
