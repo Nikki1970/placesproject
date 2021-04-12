@@ -3,6 +3,7 @@ from placesapp.models import Place
 from django.views import generic
 from .forms import PlaceForm
 from django.http import HttpResponseRedirect
+from django.contrib.auth.decorators import login_required
 # Create your views here.
 def index(request):
     num = Place.objects.all().count()
@@ -22,7 +23,8 @@ def all_cities(request):
 def city_places(request,inputcity):
     city = Place.objects.filter(city=inputcity)
     return render(request,'placesapp/city_places.html',context={"cities":city})
-
+    
+@login_required
 def place_new(request):
     if request.method == "POST":
         form = PlaceForm(request.POST)
