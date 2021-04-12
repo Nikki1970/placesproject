@@ -8,7 +8,7 @@ class Place(models.Model):
     location = PointField(null=True, blank=True)
     description = models.TextField(max_length=2000,null=True)
     address = models.CharField(max_length=200, null=True, blank=True)
-    phone = models.CharField(max_length=10,null=True)
+    phone = models.IntegerField(blank=True, null=True)
     city = models.CharField(max_length=15, null=True)
     type_of_place = models.CharField(max_length=30, null=True)
 

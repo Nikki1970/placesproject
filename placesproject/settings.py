@@ -26,7 +26,7 @@ SECRET_KEY = 'vc&km@$!ysdyd-4c4%7r=4tvw_+g!zgyz9lz!lrm4@&0w_%(fo'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['svnikhilesh-placesapp.herokuapp.com']
 
 
 # Application definition
@@ -80,10 +80,10 @@ WSGI_APPLICATION = 'placesproject.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.contrib.gis.db.backends.postgis',
-        'NAME': 'my_db',
-        'USER': 'niki',
-        'PASSWORD': 'admin@123',
-        'HOST' : 'localhost',
+        'NAME': 'd63i9utt8gqpod',
+        'USER': 'cxighmmeegdrtl',
+        'PASSWORD': '8183d5a2f08d46901a957567d41f09d6881884aa4ccc648dcb6e4570e287dab1',
+        'HOST' : 'ec2-54-167-152-185.compute-1.amazonaws.com',
         'PORT' : '5432',
     }
 }
