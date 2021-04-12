@@ -24,7 +24,6 @@ def city_places(request,inputcity):
     city = Place.objects.filter(city=inputcity)
     return render(request,'placesapp/city_places.html',context={"cities":city})
     
-@login_required
 def place_new(request):
     if request.method == "POST":
         form = PlaceForm(request.POST)
